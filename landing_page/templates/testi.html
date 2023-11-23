@@ -1,0 +1,112 @@
+{% extends "layout/base.html" %}
+{% block title %}Testimonials{% endblock title %}
+{% load static %}
+{% block content %}
+<header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center justify-content-between">
+
+        <h1 class="logo"><a href="{% url 'home' %}"></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="{% url 'home' %}" class="logo"><img src="{% static 'assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="nav-link scrollto" href="{% url 'home' %}">Home</a></li>
+                <li><a class="nav-link scrollto active" href="#">Testimonials</a></li>
+            </ul>
+        </nav><!-- .navbar -->
+
+    </div>
+</header><!-- End Header -->
+<!-- ======= Testimonials Section ======= -->
+<section id="testimonials" class="testimonials">
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+            <h2>Testimonials</h2>
+            <p>Testimoni ini adalah cerminan dari kepuasan mereka dan sekaligus menjadi inspirasi bagi kami untuk terus
+                meningkatkan layanan kami. Kami percaya bahwa pengalaman mereka dapat memberikan gambaran yang jelas
+                tentang nilai dan keandalan potadi.ai. Terima kasih telah menjadikan kami bagian dari perjalanan
+                pertanian Anda. </p>
+        </div>
+
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <div class="testimonial-item">
+                        <p>
+                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                            potadi.ai dapat mengidentifikasi penyakit pada daun kentang di kebun saya dan membantu saya
+                            mengambil langkah-langkah pencegahan yang tepat dan meningkatkan hasil panen saya.
+                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                        </p>
+                        <img src="{% static 'assets/img/testimonials/testimonials-1.jpg' %}" class="testimonial-img" alt="">
+                        <h3>Testi 1</h3>
+                        <h4>Petani Kentang</h4>
+                    </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                    <div class="testimonial-item">
+                        <p>
+                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                            Sebagai petani kentang, potadi.ai memudahkan dalam deteksi penyakit daun kentang serta
+                            mendapatkan hasil analisis yang jelas.
+                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                        </p>
+                        <img src="{% static 'assets/img/testimonials/testimonials-2.jpg' %}" class="testimonial-img" alt="">
+                        <h3>Testi 2</h3>
+                        <h4>Petani Kentang</h4>
+                    </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                    <div class="testimonial-item">
+                        <p>
+                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                            Pengalaman menggunakan potadi.ai mengesankan, Saya tidak hanya mendapatkan hasil deteksi
+                            penyakit secara cepat, tetapi juga rekomendasi perawatan yang berguna.
+                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                        </p>
+                        <img src="{% static 'assets/img/testimonials/testimonials-3.jpg' %}" class="testimonial-img" alt="">
+                        <h3>Testi 3</h3>
+                        <h4>Petani Kentang</h4>
+                    </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                    <div class="testimonial-item">
+                        <p>
+                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                            potadi.ai adalah solusi yang diperlukan bagi para petani dengan antarmuka yang ramah
+                            pengguna dan hasil analisis yang mudah dipahami.
+                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                        </p>
+                        <img src="{% static 'assets/img/testimonials/testimonials-4.jpg' %}" class="testimonial-img" alt="">
+                        <h3>Testi 4</h3>
+                        <h4>Petani Kentang</h4>
+                    </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                    <div class="testimonial-item">
+                        <p>
+                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                            Proses deteksi penyakit di potadi.ai cepat dan akurat sehingga saya dapat segera mengambil
+                            langkah-langkah perbaikan yang diperlukan.
+                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                        </p>
+                        <img src="{% static 'assets/img/testimonials/testimonials-5.jpg' %}" class="testimonial-img" alt="">
+                        <h3>Testi 5</h3>
+                        <h4>Petani Kentang</h4>
+                    </div>
+                </div><!-- End testimonial item -->
+
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+    </div>
+</section><!-- End Testimonials Section -->
+{% endblock content %}
