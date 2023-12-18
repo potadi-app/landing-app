@@ -7,8 +7,8 @@ urlpatterns = [
     path('testimonial/', views.testi, name='testi'),
     path('kontak/', views.contact, name='contact'),
     path('tentang-kami/', views.tentang_kami, name='about'),
-    path('early/', views.early, name='early'),
-    path('healthy/', views.healthy, name='healthy'),
-    path('late/', views.late, name='late'),
+    path('diseases/early/', views.early, name='early'),
+    path('diseases/healthy/', views.healthy, name='healthy'),
+    path('diseases/late/', views.late, name='late'),
 
 ]
