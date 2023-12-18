@@ -107,7 +107,9 @@ $(function() {
           $('.menu-trigger').removeClass('active');
           $('.header-area .nav').slideUp(200);  
         }       
-        
+        $('html,body').animate({
+          scrollTop: (target.offset().top) + 1
+        }, 700);
         return false;
       }
     }
@@ -129,7 +131,12 @@ $(function() {
           var target = this.hash,
           menu = target;
           var target = $(this.hash);
-          
+          $('html, body').stop().animate({
+              scrollTop: (target.offset().top) + 1
+          }, 500, 'swing', function () {
+              window.location.hash = target;
+              $(document).on("scroll", onScroll);
+          });
       });
   });
 

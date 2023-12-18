@@ -1,90 +1,104 @@
 {% extends "layout/base.html" %}
 {% block title %}Late Blight{% endblock title %}
 {% load static %}
+{% block custom_css %}
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+<!-- Vendor CSS Files -->
+<link rel="stylesheet" href="{% static 'assets/css/chain-dev.css' %}"> 
+<link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+<link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+<link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+<link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+<link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+<link href="{% static 'assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+<link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+<!-- Template Main CSS File -->
+<link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<style>
+  .custom-border {
+    border: 2px solid #ced4da;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .text-justify {
+    text-align: justify;
+  }
+</style>
+{% endblock custom_css %}
 {% block content %}
-<header id="header" class="fixed-top">
-  <div class="container d-flex align-items-center justify-content-between">
 
-    <h1 class="logo"><a href="{% url 'home' %}"></a></h1>
-    <!-- Uncomment below if you prefer to use an image logo -->
-    <!-- <a href="{% url 'home' %}" class="logo"><img src="{% static 'assets/img/logo.png' %}" alt="" class="img-fluid"></a>-->
-
-    <nav id="navbar" class="navbar">
-      <ul>
-        <li><a class="nav-link scrollto" href="{% url 'home' %}">Home</a></li>
-        <li><a class="nav-link scrollto active" href="#">Late Blight</a></li>
-      </ul>
-    </nav><!-- .navbar -->
-
-  </div>
-</header><!-- End Header -->
+{% include "partials/header2.html" %}
 
 <section id="services" class="services section-bg">
   <div class="container" data-aos="fade-up">
     <div class="row justify-content-md-center">
       <div class="col-lg-8 col-md-8 d-flex align-items-stretch custom-border" data-aos="zoom-in" data-aos-delay="100">
         <div class="section-title text-start text-justify">
-          <h2 class="text-center">Late Blight</h2>
+          <h2 class="text-center">Late Blight (Daun Busuk)</h2>
           <figure class="figure w-29 float-start m-3">
-            <img src="{% static 'assets/images/normal.png' %}" class="figure-img img-fluid rounded img-thumbnail"
-              alt="Alt text.">
+            <img src="{% static 'assets\images\normal.png' %}" class="figure-img img-fluid rounded img-thumbnail" alt="Alt text.">
           </figure>
-          <h5>Late Blight (Busuk Daun)</h5>
           <p class="text-justify">
             Penyakit late blight (hawar daun kentang) adalah salah satu penyakit paling merusak yang dapat memengaruhi
-            tanaman kentang. Disebabkan oleh Phytophthora infestans, dengan gejala bercak-bercak berair yang berkembang
-            menjadi kerak berwarna coklat tua di daun kentang. Late blight dapat menyebabkan kerusakan cepat pada
-            tanaman dan berdampak pada hasil panen. Penyakit busuk daun (late blight) akan timbul pada masa pertumbuhan
-            tanaman antara minggu ke 5-6, gejala awal penyakit busuk daun ini adalah adanya bercak basah di bagian tepi
-            daun dan bisa juga pada bagian tengah. Kemudian bercak ini akan melebar dan warna daun berubah warna mejadi
-            coklat/abu-abu.</p>
+            tanaman kentang. Disebabkan oleh Phytophthora infestans, dengan gejala bercak-bercak berair yang
+            berkembang menjadi kerak berwarna coklat tua di daun kentang. Late blight dapat menyebabkan kerusakan
+            cepat pada tanaman dan berdampak pada hasil panen. Penyakit busuk daun (late blight) akan timbul pada masa
+            pertumbuhan tanaman antara minggu ke 5-6, gejala awal penyakit busuk daun ini adalah adanya bercak basah
+            di bagian tepi daun dan bisa juga pada bagian tengah. Kemudian bercak ini akan melebar dan warna daun
+            berubah warna mejadi coklat/abu-abu.
+
+
+          </p>
           <p><b>
-              Tanda Gejala Kerusakan :</b>
+              Tanda Daun Busuk :</b>
           <ol class="text-justify">
             <li>Bercak-bercak Berair pada Daun: Tanda paling mencolok dari late blight adalah munculnya bercak-bercak
-              besar berair pada daun tanaman kentang. Bercak-bercak ini awalnya tampak seperti bercak berwarna hijau tua
-              hingga kecoklatan dan biasanya berbatasan tegas dengan daun yang sehat.</li>
+              besar berair pada daun tanaman kentang. Bercak-bercak ini awalnya tampak seperti bercak berwarna hijau
+              tua hingga kecoklatan dan biasanya berbatasan tegas dengan daun yang sehat.</li>
             <li>Perkembangan Cepat: Bercak-bercak late blight dapat berkembang dengan sangat cepat, terutama dalam
-              kondisi lembab dan dingin. Dalam beberapa hari, bercak-bercak ini dapat membesar dan menyatu, menyebabkan
-              kerusakan yang signifikan pada daun tanaman.</li>
+              kondisi lembab dan dingin. Dalam beberapa hari, bercak-bercak ini dapat membesar dan menyatu,
+              menyebabkan kerusakan yang signifikan pada daun tanaman.</li>
             <li>Umbi Kentang yang Terinfeksi: Selain daun, late blight juga dapat memengaruhi umbi kentang. Ketika
               penyakit ini menyerang umbi, gejalanya meliputi luka-luka kecil berwarna coklat gelap hingga hitam pada
               kulit umbi. Ini dapat membuat umbi menjadi tidak layak konsumsi dan mempengaruhi hasil panen.</li>
             <li>Bau Tidak Sedap: Daun dan umbi yang terinfeksi late blight seringkali memiliki bau tidak sedap yang
               mudah dikenali. Bau ini sering dijelaskan sebagai bau busuk atau bau jamur.</li>
-            <li>Kerontokan Daun: Daun-daun yang terinfeksi late blight cenderung mengering, berubah menjadi warna hitam
-              atau kecoklatan, dan akhirnya rontok. Ini menyebabkan tanaman menjadi tidak produktif dan dapat
+            <li>Kerontokan Daun: Daun-daun yang terinfeksi late blight cenderung mengering, berubah menjadi warna
+              hitam atau kecoklatan, dan akhirnya rontok. Ini menyebabkan tanaman menjadi tidak produktif dan dapat
               mempercepat penyebaran penyakit.</li>
             <li>Spora Putih pada Permukaan Daun: Ketika cuaca lembab, Anda mungkin melihat spora putih (jamur) yang
-              terbentuk di permukaan daun yang terinfeksi. Ini adalah tahap reproduksi dari jamur Phytophthora infestans
-              dan membantu dalam penyebaran penyakit.</li>
+              terbentuk di permukaan daun yang terinfeksi. Ini adalah tahap reproduksi dari jamur Phytophthora
+              infestans dan membantu dalam penyebaran penyakit.</li>
             <li>Pengaruh Cuaca: Late blight seringkali lebih aktif dan merusak pada musim hujan atau lembab, terutama
               jika suhu malam turun. Cuaca yang mendukung perkembangan jamur ini, seperti hujan dan embun, mempercepat
               penyebaran penyakit.</li>
-            <!-- ... (Tambahkan poin-poin lainnya) ... -->
           </ol>
           </p>
           <p><b>
-              How to prevent :</b>
+              Pemeliharaan Tanaman :</b>
           <ol class="text-justify">
             <li>Pilih Varietas yang Tahan: Pilih varietas kentang yang memiliki ketahanan terhadap late blight jika
               tersedia. Varietas tahan cenderung lebih resisten terhadap infeksi dan dapat membantu mengurangi risiko
               penyakit.</li>
-            <li>Rotasi Tanaman: Praktik pertanian yang paling efektif dalam mencegah late blight adalah rotasi tanaman.
-              Jangan menanam tanaman kentang atau tanaman anggota keluarga Solanaceae di lokasi yang sama setiap tahun.
-              Ini membantu mengurangi penyebaran spora penyakit yang dapat mengendap di tanah.</li>
+            <li>Rotasi Tanaman: Praktik pertanian yang paling efektif dalam mencegah late blight adalah rotasi
+              tanaman. Jangan menanam tanaman kentang atau tanaman anggota keluarga Solanaceae di lokasi yang sama
+              setiap tahun. Ini membantu mengurangi penyebaran spora penyakit yang dapat mengendap di tanah.</li>
             <li>Penghapusan Daun yang Terinfeksi: Jika Anda melihat tanda-tanda late blight pada daun tanaman kentang,
               segera potong atau cabut daun-daun yang terinfeksi. Jangan membuang daun-daun yang terinfeksi ke dalam
-              kompos, karena spora penyakit dapat tetap hidup dalam kompos. Alihkan daun-daun yang terinfeksi dari area
-              pertanian.</li>
+              kompos, karena spora penyakit dapat tetap hidup dalam kompos. Alihkan daun-daun yang terinfeksi dari
+              area pertanian.</li>
             <li>Praktik Pertanian yang Baik: Pastikan tanaman kentang mendapatkan cukup nutrisi dan air yang seimbang.
               Tanaman yang sehat cenderung lebih tahan terhadap penyakit. Juga, hindari over-fertilization, karena
               tanaman yang terlalu subur dapat menjadi lebih rentan terhadap late blight.</li>
             <li>Penyiraman yang Tepat: Hindari penyiraman di malam hari dan usahakan untuk menyiram tanaman di pagi
               hari. Ini membantu daun dan tanaman kentang tetap kering sepanjang malam, mengurangi risiko infeksi late
               blight.</li>
-            <li>Penggunaan Mulsa: Menyediakan lapisan mulsa di bawah tanaman kentang dapat membantu mencegah tanah dari
-              percikan air yang dapat membawa spora penyakit. Mulsa juga membantu menjaga kelembaban tanah.</li>
+            <li>Penggunaan Mulsa: Menyediakan lapisan mulsa di bawah tanaman kentang dapat membantu mencegah tanah
+              dari percikan air yang dapat membawa spora penyakit. Mulsa juga membantu menjaga kelembaban tanah.</li>
             <li>Monitor Cuaca: Pantau perkiraan cuaca setempat dengan cermat. Late blight lebih aktif dan merusak saat
               kondisi cuaca lembab dan dingin. Ketika cuaca cocok untuk perkembangan late blight, pertimbangkan untuk
               mengambil tindakan pencegahan.</li>
@@ -99,46 +113,120 @@
           </p>
           <div id="services" class="services section">
             <div class="container">
-              <div class="col-lg-8">
-                <div class="section-heading wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
-                  <h4>More...</h4>
-                  <img src="{% static 'assets/images/heading-line-dec.png' %}" alt="">
+              <div class="container">
+                <div class="row">
+                  <div class="col-12 d-flex justify-content-center">
+                    <div class="section-heading wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
+                      <h4>Contoh Daun</h4>
+                      <img src="{% static 'assets/images/heading-line-dec.png' %}" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Image Gallery Section -->
+              <div class="row">
+                <!-- Gallery Item 1 -->
+                <div class="col-lg-4 col-md-6 mb-4 gallery-item">
+                  <div class="image-container">
+                    <img src="{% static 'assets/img/Potato Disease/Early Blight/Early 1.jpg' %}" alt="Image Description 1"
+                      class="img-fluid gallery-image">
+                    <a href="{% static 'assets/images/image1.jpg" download="Image1.jpg' %}" class="download-btn">
+                      <!-- Bootstrap Icons Download SVG -->
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                        class="bi bi-download download-icon" viewBox="0 0 16 16">
+                        <path
+                          d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5" />
+                        <path
+                          d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <!-- Gallery Item 2 -->
+                <div class="col-lg-4 col-md-6 mb-4 gallery-item">
+                  <div class="image-container">
+                    <img src="{% static 'assets/img/Potato Disease/Early Blight/Early 2.jpg' %}" alt="Image Description 2"
+                      class="img-fluid gallery-image">
+                    <a href="{% static 'assets/images/image2.jpg" download="Image2.jpg' %}" class="download-btn">
+                      <!-- Bootstrap Icons Download SVG -->
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                        class="bi bi-download download-icon" viewBox="0 0 16 16">
+                        <path
+                          d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5" />
+                        <path
+                          d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <!-- Gallery Item 3 -->
+                <div class="col-lg-4 col-md-6 mb-4 gallery-item">
+                  <div class="image-container">
+                    <img src="{% static 'assets/img/Potato Disease/Early Blight/Early 3.jpg' %}" alt="Image Description 3"
+                      class="img-fluid gallery-image">
+                    <a href="{% static 'assets/images/image3.jpg" download="Image3.jpg' %}" class="download-btn">
+                      <!-- Bootstrap Icons Download SVG -->
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                        class="bi bi-download download-icon" viewBox="0 0 16 16">
+                        <path
+                          d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5" />
+                        <path
+                          d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+                      </svg>
+                    </a>
+                  </div>
                 </div>
               </div>
               <div class="row">
-                <div class="col-lg-4">
-                  <div class="card service-item first-service">
-                    <img src="{% static 'assets/images/card1.jpg' %}" class="card-img-top" alt="App Maintenance Image">
-                    <div class="card-body">
-                      <h5 class="card-title">Normal</h5>
-                      <p class="card-text">Daun terlihat segar dan tidak ada bintik-bintik pada daun ini …</p>
-                      <a href="{% url 'healthy' %}" class="btn btn-primary" style="margin-top: 8px;">Read More <i
-                          class="fa fa-arrow-right"></i></a>
-                    </div>
+                <!-- Gallery Item 1 -->
+                <div class="col-lg-4 col-md-6 mb-4 gallery-item">
+                  <div class="image-container">
+                    <img src="{% static 'assets/img/Potato Disease/Early Blight/Early 1.jpg' %}" alt="Image Description 1"
+                      class="img-fluid gallery-image">
+                    <a href="{% static 'assets/images/image1.jpg" download="Image1.jpg' %}" class="download-btn">
+                      <!-- Bootstrap Icons Download SVG -->
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                        class="bi bi-download download-icon" viewBox="0 0 16 16">
+                        <path
+                          d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5" />
+                        <path
+                          d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+                      </svg>
+                    </a>
                   </div>
                 </div>
-                <div class="col-lg-4">
-                  <div class="card service-item first-service">
-                    <img src="{% static 'assets/images/card2.jpg' %}" class="card-img-top"
-                      alt="Rocket Speed of App Image">
-                    <div class="card-body">
-                      <h5 class="card-title">Early Blight</h5>
-                      <p class="card-text">Daun terlihat segar dan tidak ada bintik-bintik pada daun ini …</p>
-                      <a href="{% url 'early' %}" class="btn btn-primary" style="margin-top: 8px;">Read More <i
-                          class="fa fa-arrow-right"></i></a>
-                    </div>
+                <!-- Gallery Item 2 -->
+                <div class="col-lg-4 col-md-6 mb-4 gallery-item">
+                  <div class="image-container">
+                    <img src="{% static 'assets/img/Potato Disease/Early Blight/Early 2.jpg' %}" alt="Image Description 2"
+                      class="img-fluid gallery-image">
+                    <a href="{% static 'assets/images/image2.jpg" download="Image2.jpg' %}" class="download-btn">
+                      <!-- Bootstrap Icons Download SVG -->
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                        class="bi bi-download download-icon" viewBox="0 0 16 16">
+                        <path
+                          d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5" />
+                        <path
+                          d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+                      </svg>
+                    </a>
                   </div>
                 </div>
-                <div class="col-lg-4">
-                  <div class="card service-item first-service">
-                    <img src="{% static 'assets/images/card3.jpg' %}" class="card-img-top"
-                      alt="Multi Workflow Idea Image">
-                    <div class="card-body">
-                      <h5 class="card-title">Late Blight</h5>
-                      <p class="card-text">Daun terlihat segar dan tidak ada bintik-bintik pada daun ini …</p>
-                      <a href="{% url 'late' %}" class="btn btn-primary" style="margin-top: 8px;">Read More <i
-                          class="fa fa-arrow-right"></i></a>
-                    </div>
+                <!-- Gallery Item 3 -->
+                <div class="col-lg-4 col-md-6 mb-4 gallery-item">
+                  <div class="image-container">
+                    <img src="{% static 'assets/img/Potato Disease/Early Blight/Early 3.jpg' %}" alt="Image Description 3"
+                      class="img-fluid gallery-image">
+                    <a href="{% static 'assets/images/image3.jpg" download="Image3.jpg' %}" class="download-btn">
+                      <!-- Bootstrap Icons Download SVG -->
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                        class="bi bi-download download-icon" viewBox="0 0 16 16">
+                        <path
+                          d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5" />
+                        <path
+                          d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+                      </svg>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -149,6 +237,6 @@
       </div>
     </div>
   </div>
-</section>
 
+</section>
 {% endblock content %}

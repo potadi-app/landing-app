@@ -2,40 +2,41 @@
 {% load static %}
 <html lang="en">
 
+
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>{% block title %} | Potadi{% endblock title %}</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link href="{% static 'assets/images/leaf.png' %}" rel="icon">
-  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
-  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
-  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
-  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
-  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
-  <link href="{% static 'assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
-  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" type="image/png" href="{% static 'assets/images/leaf.png' %}" /> 
+  <title>{% block title %}{% endblock title %}</title>
+  {% block custom_css %}
+  {% endblock custom_css %}
+    
+  <!--TemplateMo 570 Chain App Dev https://templatemo.com/tm-570-chain-app-dev -->
 </head>
 
 <body>
+  {% block preloader %}
+  {% include "partials/preloader.html" %}
+  {% endblock preloader %}
 
-    {% block content %}{% endblock content %}
+  {% block content %}{% endblock content %}
 
-    
+
+  <!-- Scripts -->
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/js/owl-carousel.js' %}"></script>
+  <script src="{% static 'assets/js/animation.js' %}"></script>
+  <script src="{% static 'assets/js/imagesloaded.js' %}"></script>
+  <script src="{% static 'assets/js/popup.js' %}"></script>
+  <script src="{% static 'assets/js/custom.js' %}"></script>
+  <!-- Include Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
   <!-- Vendor JS Files -->
   <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
   <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
@@ -47,6 +48,17 @@
 
   <!-- Template Main JS File -->
   <script src="{% static 'assets/js/main.js' %}"></script>
+
+  <!-- Your custom scripts or additional dependencies -->
+  <script>
+    // Activate the carousel with auto slide
+    $(document).ready(function () {
+      $('#carouselExample').carousel({
+        interval: 3000, // Adjust the interval as needed (in milliseconds)
+        pause: false // Set to true if you want to pause on hover
+      });
+    });
+  </script>
 
 </body>
 
