@@ -847,3 +847,7 @@ body {
   fill: white;
 }
 
+.card-body .btn:hover {
+  background: #d5f3ff;
+  color: #444444;
+}

@@ -56,23 +56,19 @@
       headers: {'X-Requested-With': 'XMLHttpRequest'}
     })
     .then(response => {
-      if( response ) {
-        return response.json();
+      if( response.ok ) {
+        return response.text();
       } else {
         throw new Error(`${response.status} ${response.statusText} ${response.url}`); 
       }
     })
     .then(data => {
       thisForm.querySelector('.loading').classList.remove('d-block');
-      if (data.status === 200) {
-        setTimeout(function() {
-          thisForm.querySelector('.sent-message').innerHTML = data.message ? data.message : 'Your message has been sent!';
-          thisForm.querySelector('.sent-message').classList.add('d-block');
-          thisForm.reset(); 
-        }, 4000);
-        thisForm.querySelector('.sent-message').classList.add('d-none');
+      if (data.trim() == 'OK') {
+        thisForm.querySelector('.sent-message').classList.add('d-block');
+        thisForm.reset(); 
       } else {
-        throw new Error(data.message ? data.message : 'Form submission failed and no error message returned from: ' + action); 
+        throw new Error(data ? data : 'Form submission failed and no error message returned from: ' + action); 
       }
     })
     .catch((error) => {

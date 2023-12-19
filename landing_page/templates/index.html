@@ -200,58 +200,61 @@
       <div class="col-lg-8 offset-lg-2">
         <div class="section-heading wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
           <h4><em>Diagnosa &amp; identifikasi penyakit</em> Tanaman Kentang</h4>
-          <img src="{% static 'assets/images/heading-line-dec.png' %}" alt="">
-          <p>Kami tidak bisa membiarkan tanaman kentang Anda menderita gangguan dan kerusakan akibat berbagai
-            penyakit. Mari kita mulai pengidentifikasi penyakit tanaman kentang menggunakan POTADI (Potato Disease
-            Identification).</p>
+          <img src="assets/images/heading-line-dec.png" alt="">
+          <p>Kami tidak bisa membiarkan tanaman kentang Anda menderita gangguan dan kerusakan akibat berbagai penyakit. Mari kita mulai pengidentifikasi penyakit tanaman kentang menggunakan POTADI (Potato Disease Identification).</p>
         </div>
       </div>
     </div>
   </div>
+</div>
 
-  <section id="disease" class="disease">
-    <div class="container" data-aos="fade-up">
-      <div class="col-lg-8 offset-lg-2">
-        <div class="section-heading wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
-          <h4>Disease</h4>
-          <img src="{% static 'assets/images/heading-line-dec.png' %}" alt="">
-        </div>
-      </div>
+<section id="disease" class="disease services section">
+  <div class="container" data-aos="fade-up">
+    <div class="container">
       <div class="row">
-        <div class="col-lg-4">
-          <div class="card service-item first-service">
-            <img src="{% static 'assets/images/card1.jpg' %}" class="card-img-top" alt="App Maintenance Image">
-            <div class="card-body">
-              <h5 class="card-title">Normal</h5>
-              <p class="card-text">Daun terlihat segar dan tidak ada bintik-bintik pada daun ini …</p>
-              <a href="{% url 'healthy' %}" class="btn btn-primary">Read More <i class="fa fa-arrow-right"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="card service-item first-service">
-            <img src="{% static 'assets/images/card2.jpg' %}" class="card-img-top" alt="Rocket Speed of App Image">
-            <div class="card-body">
-              <h5 class="card-title">Early Blight</h5>
-              <p class="card-text">Daun terlihat segar dan tidak ada bintik-bintik pada daun ini …</p>
-              <a href="{% url 'early' %}" class="btn btn-primary">Read More <i class="fa fa-arrow-right"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="card service-item first-service">
-            <img src="{% static 'assets/images/card3.jpg' %}" class="card-img-top" alt="Multi Workflow Idea Image">
-            <div class="card-body">
-              <h5 class="card-title">Late Blight</h5>
-              <p class="card-text">Daun terlihat segar dan tidak ada bintik-bintik pada daun ini …</p>
-              <a href="{% url 'late' %}" class="btn btn-primary">Read More <i class="fa fa-arrow-right"></i></a>
-            </div>
+        <div class="col-12 d-flex justify-content-center">
+          <div class="section-heading wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
+            <h4>Disease</h4>
+            <img src="assets/images/heading-line-dec.png" alt="">
           </div>
         </div>
       </div>
     </div>
-  </section>
-</div><br><br><br>
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="card service-item first-service">
+          <img src="{% static 'assets/images/card1.jpg' %}" class="card-img-top" alt="App Maintenance Image">
+          <div class="card-body">
+            <h5 class="card-title">Normal</h5>
+            <p class="card-text">Daun terlihat segar dan tidak ada bintik-bintik pada daun ini …</p>
+            <a href="{% url 'healthy'%}" class="btn btn-primary">Read More <i class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="card service-item first-service">
+          <img src="{% static 'assets/images/card2.jpg' %}" class="card-img-top" alt="Rocket Speed of App Image">
+          <div class="card-body">
+            <h5 class="card-title">Early Blight</h5>
+            <p class="card-text">Daun terlihat segar dan tidak ada bintik-bintik pada daun ini …</p>
+            <a href="{% url 'early'%}" class="btn btn-primary">Read More <i class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="card service-item first-service">
+          <img src="{% static 'assets/images/card3.jpg' %}" class="card-img-top" alt="Multi Workflow Idea Image">
+          <div class="card-body">
+            <h5 class="card-title">Late Blight</h5>
+            <p class="card-text">Daun terlihat segar dan tidak ada bintik-bintik pada daun ini …</p>
+            <a href="{% url 'late'%}" class="btn btn-primary">Read More <i class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+<br><br><br>
+</section>
 
 <!-- ======= Testimonials Section ======= -->
 <section id="testimonials" class="testimonials">
@@ -383,8 +386,7 @@
       </div>
 
       <div class="col-lg-8 mt-5 mt-lg-0">
-        <form action="{% url 'send_email' %}" method="post" role="form" class="php-email-form">
-          {% csrf_token %}
+        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
           <div class="row gy-2 gx-md-3">
             <div class="col-md-6 form-group">
               <input type="text" name="name" class="form-control" id="name" placeholder="Nama" required>
@@ -401,7 +403,7 @@
             <div class="my-3 col-12">
               <div class="loading">Loading</div>
               <div class="error-message"></div>
-              <div class="sent-message"></div>
+              <div class="sent-message">Your message has been sent. Thank you!</div>
             </div>
             <div class="text-center col-12"><button type="submit">Send Message</button></div>
           </div>
