@@ -10,5 +10,5 @@ urlpatterns = [
     path('diseases/early/', views.early, name='early'),
     path('diseases/healthy/', views.healthy, name='healthy'),
     path('diseases/late/', views.late, name='late'),
-
+    path('send_email/', views.send_email, name='send_email')
 ]

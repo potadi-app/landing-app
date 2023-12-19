@@ -11,7 +11,7 @@
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
-                        <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+                        <li class="scroll-to-section"><a href="#top" class="{% if request.path == '/' %}active{% endif %}">Home</a></li>
                         <li class="scroll-to-section"><a href="#disease">Disease</a></li>
                         <li class="scroll-to-section"><a href="#testimonials">Testimonials</a></li>
                         <li class="scroll-to-section"><a href="#contact">Contact Us</a></li>
