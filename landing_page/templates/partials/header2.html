@@ -12,8 +12,8 @@
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
-              <li class="scroll-to-section"><a href="{% url 'home' %}#disease" class="active">Home</a></li>
-              <li class="scroll-to-section"><a href="{% url 'home' %}#disease">Disease</a></li>
+              <li class="scroll-to-section"><a href="{% url 'home' %}" class="{% if request.path == '/' %}active{% endif %}">Home</a></li>
+              <li class="scroll-to-section"><a href="{% url 'home' %}#disease" class="{% if '/diseases/' in request.path %}active{% endif %}">Disease</a></li>
               <li class="scroll-to-section"><a href="{% url 'home' %}#testimonials">Testimonials</a></li>
               <li class="scroll-to-section"><a href="{% url 'home' %}#contact">Contact Us</a></li>
               <li class="scroll-to-section"><a href="{% url 'about' %}">About Us</a></li>
