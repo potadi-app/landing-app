@@ -11,11 +11,11 @@
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
-                        <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-                        <li class="scroll-to-section"><a href="#disease">Disease</a></li>
+                        <li class="scroll-to-section"><a href="#top" class="{% if request.path == '/' %}active{% endif %}">Home</a></li>
+                        <li class="scroll-to-section"><a href="#disease" class="{% if '/diseases/' in request.path %}active{% endif %}">Disease</a></li>
                         <li class="scroll-to-section"><a href="#testimonials">Testimonials</a></li>
                         <li class="scroll-to-section"><a href="#contact">Contact Us</a></li>
-                        <li class="scroll-to-section"><a href="{% url 'about'%}#tentang">About Us</a></li>
+                        <li class="scroll-to-section"><a href="{% url 'about'%}">About Us</a></li>
                         <li>
                             <div class="gradient-button"><a href="https://app.potadi.ai/"><i
                                         class="fa fa-sign-in-alt"></i> Sign In Now</a></div>
